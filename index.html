@@ -1156,7 +1156,7 @@
             <div class="contact-icon">✉️</div>
             <div>
               <p style="color:var(--text);margin-bottom:2px;" id="ci-email">البريد الإلكتروني</p>
-              <p><a href="/cdn-cgi/l/email-protection#e48d8a828ba48087c99780ca8a8190"><span class="__cf_email__" data-cfemail="573e3931381733347a243379393223">[email&#160;protected]</span></a></p>
+              <p><span>i</span><span>n</span><span>f</span><span>o</span><span>&#64;</span><span>d</span><span>c</span><span>-</span><span>s</span><span>d</span><span>.</span><span>n</span><span>e</span><span>t</span></p>
             </div>
           </div>
 
@@ -1179,7 +1179,7 @@
           
           <!-- Formspree Form - يرسل مباشرة لـ info@dc-sd.net -->
           <!-- ملاحظة: استبدل YOUR_FORM_ID بالـ ID من formspree.io -->
-          <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" enctype="multipart/form-data" onsubmit="handleFormSubmit(event)">
+          <form id="contactForm" action="https://formspree.io/f/xeerdbyp" method="POST" enctype="multipart/form-data" onsubmit="handleFormSubmit(event)">
             
             <input type="hidden" name="_subject" value="بلاغ/رسالة جديدة - موقع DC-SD"/>
             <input type="hidden" name="_replyto" id="reply-email"/>
@@ -1553,6 +1553,15 @@
         btn.disabled = false;
       }
     }
+
+    // Render emails to avoid CF obfuscation
+    (function(){
+      var u='info',d='dc-sd.net',e=u+'@'+d;
+      var s1=document.getElementById('em1');
+      var s2=document.getElementById('em2');
+      if(s1) s1.innerHTML=e;
+      if(s2) s2.innerHTML=e;
+    })();
   </script>
 </body>
 </html>
